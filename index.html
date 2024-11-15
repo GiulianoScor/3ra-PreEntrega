@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battle Konoha</title>
+  
+  <!-- Vinculación de hojas de estilo -->
+  <link rel="stylesheet" href="background-pelea.css">
+  <link rel="stylesheet" href="/Pruebas/style2.css">
+</head>
+
+<body>
+  <!-- Fondo de batalla -->
+  <div class="background">
+    
+    <!-- Título de la batalla -->
+    <div class="tittle">
+      <h1>Konoha Battle</h1>
+    </div>
+
+    <!-- Pantalla de selección de personaje -->
+    <div class="overlay">
+      <div class="pregunta">
+        <h2>¿Qué personaje desea seleccionar?</h2>
+        
+        <!-- Botones de selección de personaje -->
+        <div class="opciones">
+          <button id="bt1" class="opcion">Naruto</button>
+          <button id="bt2" class="opcion">Pain</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barra de vida del jugador -->
+    <div class="vida-container" >
+      <div class="vida left"></div>
+    </div>
+
+    <!-- Personaje jugador (p1) -->
+    <div id="p1" class="personaje player"></div>
+
+    <!-- Barra de vida del oponente -->
+    <div class="vida-container" >
+      <div class="vida right"></div>
+    </div>
+
+    <!-- Personaje oponente (p2) -->
+    <div id="p2" class="personaje opponent"></div>
+
+    <!-- Opciones de batalla (por definir) -->
+    <div id="opcionesBatalla" class="battle-options">
+      
+    
+    </div>
+
+    <div id="narra1">
+
+    </div>
+
+
+  <!-- Archivos de script -->
+  <script src="class.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
