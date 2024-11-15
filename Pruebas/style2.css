@@ -1,0 +1,269 @@
+.battle-options {
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+.battle-button {
+    padding: 10px 20px;
+    background:linear-gradient(to right, transparent, #222);
+    color:  rgb(139, 54, 83);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    font-family: 'naruto';
+    font-weight: bold;  }   .battle-button:hover {
+    background-color:  rgb(128, 42, 70); 
+    transform: scale(1.1); 
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); 
+    transition: all 0.3s ease-in-out; 
+    color: #f3b631;
+}  
+.battle-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(15, 11, 1, 0.979);  }  
+.battle-button:active {
+    transform: scale(0.98); 
+}
+
+  /* Animación para la entrada de los nombres: empezando grande y luego disminuyendo */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; 
+        transform: scale(2); 
+    }
+    50% {
+        opacity: 0.5; 
+        transform: scale(1.2); 
+    }
+    100% {
+        opacity: 1; 
+        transform: scale(1); 
+    }
+}
+
+  /* Overlay que cubre toda la pantalla */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+  /* Contenedor del mensaje */
+.pregunta {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pregunta h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+  /* Estilo para los botones */
+.opciones {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.opcion {
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.opcion:hover {
+    background: #f57c00; 
+}
+
+.opcion:active {
+    transform: scale(0.98); 
+}
+
+
+/* Estilos para el narrador */
+.narrador {
+    position: absolute;
+    bottom: 0; 
+    right: 0; 
+    width: 300px; 
+    background-color:rgba(0, 0, 0, 0.7); 
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+}
+
+  /* Estilos para el texto dentro del narrador */
+.narrador p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Estilo para el menú desplegable */
+.menu-emergente {
+    position: absolute;
+    bottom: 30px;
+    left: 170%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: table-row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cuando el menú está activo */
+.menu-emergente.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilos para los elementos del menú */
+.menu-item {
+    width: 60px;  
+    height: 60px; 
+    background-color: #1e90ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: rotate(45deg); /* Forma de rombo */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 2; 
+}
+
+/* Estilo para el texto dentro del rombo */
+span.text {
+    color: rgb(131, 131, 131);
+    font-size: 12px; 
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    transform: rotate(-45deg); 
+}
+
+
+.menu-item:hover {
+    transform: rotate(45deg) scale(1.1);
+}
+
+
+.menu-item:active {
+    transform: rotate(45deg) scale(0.95);
+}
+
+/* Posicionamiento de las opciones en forma de rombo */
+.menu-item:nth-child(1) {
+    top: -100px; 
+    left: 0%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.menu-item:nth-child(2) {
+    top: 0;
+    left: -100px; 
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.menu-item:nth-child(3) {
+    top: 0;
+    right: -100px; 
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.menu-item:nth-child(4) {
+    bottom: -100px; 
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.rasengan {
+    background: url("/imagenes/rasengan.png") center / cover fixed;
+}
+
+.devastacion {
+    background: url("/imagenes/devastacion.png") center / cover fixed;
+}
+
+.proximamente {
+    background: center / cover fixed ;
+}
+
+
+
+.animacion-container {
+    position: absolute;
+    top: 50%;
+    left: 120%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    z-index: 10;  /* Añadido z-index alto para asegurarnos de que esté por encima de otros elementos */
+}
+
+/* Animación de ataque */
+.animacion {
+    width: 100px;
+    opacity: 0;   
+    transition: opacity 0.5s ease-in-out;
+    z-index: 11;  
+    margin-bottom: 10%;
+}
+
+/* Animación activa */
+.animacion-activa {
+    opacity: 1;
+    animation: moveAndRotate 3s ease-in-out forwards;
+}
+
+/* Animación: Movimiento y rotación */
+@keyframes moveAndRotate {
+    0% {
+        transform: translateX(-100%) rotate(0deg);
+        opacity: 1;  
+    }
+
+    50% {
+        transform: translateX(50vw) rotate(180deg); 
+        opacity: 1;  
+    }
+
+    80% {
+        transform: translateX(90vw) rotate(270deg); 
+        opacity: 0.5;  
+    }
+
+    100% {
+        transform: translateX(100vw) rotate(360deg); 
+        opacity: 0;  
+    }
+}
+
+
